@@ -19,6 +19,7 @@ function App() {
 
   const clearTaskDb = () => {
     setTaskDB([]);
+
   };
 
   return (
@@ -29,6 +30,7 @@ function App() {
         updateTaskDb={updateTaskDb}
         clearTaskDb={clearTaskDb}
         newItem={newItem}
+        taskDB={taskDB}
       ></SubmitForm>
       <TodoList taskDB={taskDB} />
     </div>

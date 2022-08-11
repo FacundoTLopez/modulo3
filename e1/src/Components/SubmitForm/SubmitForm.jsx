@@ -6,6 +6,7 @@ export const SubmitForm = ({
   updateTaskDb,
   clearTaskDb,
   newItem,
+  taskDB
 }) => {
   return (
     <div>
@@ -13,7 +14,7 @@ export const SubmitForm = ({
         <input onChange={addTask} value={newItem}></input>
         <button>Agregar</button>
       </form>
-      <button onClick={clearTaskDb}>Limpiar lista</button>
+      <button onClick={clearTaskDb} disabled={taskDB.length <= 0 ? true : false} >Limpiar lista</button>
     </div>
   );
 };
